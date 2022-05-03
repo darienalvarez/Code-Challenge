@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/employeeListFragment">
+    app:startDestination="@id/transactionListFragment">
 
     <fragment
-        android:id="@+id/employeeListFragment"
+        android:id="@+id/transactionListFragment"
         android:name="com.darienalvarez.codechallenge.ui.features.transaction.TransactionListFragment"
         android:label="@string/transactions"
         tools:layout="@layout/fragment_transaction_list">
         <action
-            android:id="@+id/action_employeeListFragment_to_transactionDetailsFragment"
+            android:id="@+id/to_transactionDetailsFragment"
             app:destination="@id/transactionDetailsFragment" />
     </fragment>
     <fragment

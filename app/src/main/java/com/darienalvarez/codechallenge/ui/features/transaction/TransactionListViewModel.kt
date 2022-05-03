@@ -3,7 +3,7 @@ package com.darienalvarez.codechallenge.ui.features.transaction
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.darienalvarez.codechallenge.domain.model.dto.TransactionDto
-import com.darienalvarez.codechallenge.domain.repository.EmployeeRepository
+import com.darienalvarez.codechallenge.domain.repository.TransactionRepository
 import com.darienalvarez.codechallenge.ui.core.BaseState
 import com.darienalvarez.codechallenge.ui.core.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class TransactionListViewModel @Inject constructor(
-    private val repository: EmployeeRepository,
+    private val repository: TransactionRepository,
     private val savedStateHandle: SavedStateHandle
 ) : BaseViewModel() {
 

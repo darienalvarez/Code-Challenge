@@ -1,8 +1,8 @@
 package com.darienalvarez.codechallenge.system.di
 
 import com.darienalvarez.codechallenge.domain.api.TransactionSource
-import com.darienalvarez.codechallenge.domain.repository.EmployeeRepository
-import com.darienalvarez.codechallenge.domain.repository.EmployeeRepositoryImpl
+import com.darienalvarez.codechallenge.domain.repository.TransactionRepository
+import com.darienalvarez.codechallenge.domain.repository.TransactionRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,7 +16,7 @@ object RepositoryModule {
     @Provides
     fun provideEmployeeRepository(
         transactionSource: TransactionSource,
-    ): EmployeeRepository {
-        return EmployeeRepositoryImpl(transactionSource, Dispatchers.IO)
+    ): TransactionRepository {
+        return TransactionRepositoryImpl(transactionSource, Dispatchers.IO)
     }
 }

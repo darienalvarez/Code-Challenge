@@ -6,7 +6,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-interface EmployeeRepository {
+interface TransactionRepository {
 
     /**
      * Gets a list of employees
@@ -16,10 +16,10 @@ interface EmployeeRepository {
     suspend fun getTransactions(): List<TransactionDto>?
 }
 
-class EmployeeRepositoryImpl @Inject constructor(
+class TransactionRepositoryImpl @Inject constructor(
     private val transactionSource: TransactionSource,
     private val dispatcher: CoroutineDispatcher
-) : EmployeeRepository {
+) : TransactionRepository {
 
     override suspend fun getTransactions(): List<TransactionDto>? = withContext(dispatcher) {
         transactionSource.getTransactions()?.map {
