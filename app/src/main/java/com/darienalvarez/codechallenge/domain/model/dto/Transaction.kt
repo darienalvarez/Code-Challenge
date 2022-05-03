@@ -2,7 +2,9 @@ package com.darienalvarez.codechallenge.domain.model.dto
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
-import java.time.LocalDateTime 
+import java.text.NumberFormat
+import java.time.LocalDateTime
+import java.util.*
 
 /**
  * Represents a Transaction
@@ -65,7 +67,7 @@ interface Transaction {
 
     val lastTranDate: String
 
-    val maturityLoanDueDate: LocalDateTime ?
+    val maturityLoanDueDate: LocalDateTime?
 
     val comment: String
 
@@ -99,11 +101,11 @@ interface Transaction {
 
     val balSeg001SegmentID: String
 
-    val balSeg001PmtChangeDate: LocalDateTime ?
+    val balSeg001PmtChangeDate: LocalDateTime?
 
-    val interestEffectiveDate: LocalDateTime ?
+    val interestEffectiveDate: LocalDateTime?
 
-    val balSeg001PrevFirstPmtDate: LocalDateTime ?
+    val balSeg001PrevFirstPmtDate: LocalDateTime?
 
     val draftNumber: String
 
@@ -164,9 +166,9 @@ data class TransactionDto(
     override val recurring: Long,
     override val feeExemptCourtesyAmount: Double,
     override val balSeg001SegmentID: String,
-    override val balSeg001PmtChangeDate: LocalDateTime ?,
-    override val interestEffectiveDate: LocalDateTime ?,
-    override val balSeg001PrevFirstPmtDate: LocalDateTime ?,
+    override val balSeg001PmtChangeDate: LocalDateTime?,
+    override val interestEffectiveDate: LocalDateTime?,
+    override val balSeg001PrevFirstPmtDate: LocalDateTime?,
     override val draftNumber: String,
     override val tracerNumber: String,
     override val subSourceDescription: String,

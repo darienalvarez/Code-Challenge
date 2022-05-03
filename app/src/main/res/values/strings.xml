@@ -7,4 +7,7 @@
     <string name="transactions">Transactions</string>
     <string name="transaction_details">Transaction Details</string>
     <string name="empty_transaction_list">No transactions found</string>
+    <string name="accountNumber">Account Number:</string>
+    <string name="effectiveDay">Effective Day:</string>
+    <string name="newBalance">New Balance</string>
 </resources>
