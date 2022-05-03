@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Code Challenge</string>
+    <string name="error_loading_title">Error Loading Data</string>
+    <string name="error_loading_message">Error loading data from file</string>
+    <string name="cancel">Cancel</string>
+    <string name="retry">Retry</string>
+    <string name="transactions">Transactions</string>
+    <string name="transaction_details">Transaction Details</string>
+    <string name="empty_transaction_list">No transactions found</string>
+</resources>

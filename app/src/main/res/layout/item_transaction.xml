@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="transaction"
+            type="com.darienalvarez.codechallenge.domain.model.dto.TransactionDto" />
+
+        <variable
+            name="onClick"
+            type="com.darienalvarez.codechallenge.ui.common.OnItemClick" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="@{() -> onClick.onClick(transaction)}">
+        
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_margin_normal"
+            android:layout_marginTop="@dimen/text_margin_normal"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textStyle="bold"
+            android:text="@{transaction.accountNumber}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="account" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_margin_normal"
+            android:layout_marginTop="@dimen/text_margin_xsmall"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:text="@{transaction.effectiveDate}"
+            app:layout_constraintBottom_toTopOf="@id/team"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            tools:text="Date" />
+
+        <TextView
+            android:id="@+id/team"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_margin_normal"
+            android:layout_marginBottom="@dimen/text_margin_normal"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:text="@{transaction.comment}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            tools:text="comment" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
