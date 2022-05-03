@@ -93,8 +93,9 @@ class TransactionJson(
     @Json(name = "LastTranDate")
     override val lastTranDate: String,
 
-    @JsonDateTime
+
     @Json(name = "MaturityLoanDueDate")
+    @JsonDateTime
     override val maturityLoanDueDate: LocalDateTime? = null,
 
     @Json(name = "Comment")
@@ -145,16 +146,16 @@ class TransactionJson(
     @Json(name = "BalSeg001SegmentId")
     override val balSeg001SegmentID: String,
 
-    @JsonDateTime
-    @Json(name = "BalSeg001PmtChangeDate")
-    override val balSeg001PmtChangeDate: LocalDateTime? = null,
-
-    @JsonDateTime
     @Json(name = "InterestEffectiveDate")
+    @JsonDateTime
     override val interestEffectiveDate: LocalDateTime? = null,
 
+    @Json(name = "BalSeg001PmtChangeDate")
     @JsonDateTime
+    override val balSeg001PmtChangeDate: LocalDateTime? = null,
+
     @Json(name = "BalSeg001PrevFirstPmtDate")
+    @JsonDateTime
     override val balSeg001PrevFirstPmtDate: LocalDateTime? = null,
 
     @Json(name = "DraftNumber")

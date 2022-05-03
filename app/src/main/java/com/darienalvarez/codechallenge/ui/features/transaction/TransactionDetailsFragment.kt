@@ -16,7 +16,7 @@ class TransactionDetailsFragment:
 
     override val viewModel: TransactionDetailsViewModel by viewModels()
 
-    val args: TransactionDetailsFragmentArgs by navArgs()
+    private val args: TransactionDetailsFragmentArgs by navArgs()
 
     override fun setupView(view: View, savedInstanceState: Bundle?) {
         binding.transaction = args.transaction
