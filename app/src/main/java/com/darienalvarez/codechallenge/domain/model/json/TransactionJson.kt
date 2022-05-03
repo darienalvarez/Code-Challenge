@@ -46,10 +46,12 @@ class TransactionJson(
     override val sequenceNumber: Long,
 
     @Json(name = "EffectiveDate")
-    override val effectiveDate: String,
+    @JsonDateTime
+    override val effectiveDate: LocalDateTime,
 
     @Json(name = "PostDate")
-    override val postDate: String,
+    @JsonDateTime
+    override val postDate: LocalDateTime,
 
     @Json(name = "PostTime")
     override val postTime: Long,
@@ -91,8 +93,8 @@ class TransactionJson(
     override val escrowAmount: Double,
 
     @Json(name = "LastTranDate")
-    override val lastTranDate: String,
-
+    @JsonDateTime
+    override val lastTranDate: LocalDateTime,
 
     @Json(name = "MaturityLoanDueDate")
     @JsonDateTime

@@ -35,9 +35,9 @@ interface Transaction {
 
     val sequenceNumber: Long
 
-    val effectiveDate: String
+    val effectiveDate: LocalDateTime
 
-    val postDate: String
+    val postDate: LocalDateTime
 
     val postTime: Long
 
@@ -65,7 +65,7 @@ interface Transaction {
 
     val escrowAmount: Double
 
-    val lastTranDate: String
+    val lastTranDate: LocalDateTime
 
     val maturityLoanDueDate: LocalDateTime?
 
@@ -133,8 +133,8 @@ data class TransactionDto(
     override val voidCode: Long,
     override val subActionCode: String,
     override val sequenceNumber: Long,
-    override val effectiveDate: String,
-    override val postDate: String,
+    override val effectiveDate: LocalDateTime,
+    override val postDate: LocalDateTime,
     override val postTime: Long,
     override val previousAvailableBalance: Double,
     override val userNumber: Long,
@@ -148,7 +148,7 @@ data class TransactionDto(
     override val newBalance: Double,
     override val feeAmount: Double,
     override val escrowAmount: Double,
-    override val lastTranDate: String,
+    override val lastTranDate: LocalDateTime,
     override val maturityLoanDueDate: LocalDateTime?,
     override val comment: String,
     override val branch: Long,

@@ -45,7 +45,7 @@
             android:layout_marginStart="@dimen/text_margin_normal"
             android:layout_marginTop="@dimen/text_margin_xsmall"
             android:textAppearance="?attr/textAppearanceListItem"
-            android:text="@{transaction.effectiveDate}"
+            android:text="@{transaction.effectiveDate.toString()}"
             app:layout_constraintBottom_toTopOf="@id/team"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
