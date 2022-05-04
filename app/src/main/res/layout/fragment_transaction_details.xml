@@ -153,8 +153,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/newBalance"
                 tools:text="Date" />
 
-            interestEffectiveDate
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>
